@@ -35,7 +35,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
       "Supabase and Render host our database and servers.",
       "Cloudinary stores voice recordings and profile pictures.",
       "Groq and OpenRouter process requests for AI features.",
-      "Resend delivers our emails.",
+      "Resend delivers our emails, and Zoho Mail receives the messages you send to our support address.",
       "Expo delivers push notifications.",
       "RevenueCat, Google Play and the App Store handle subscriptions.",
       "Google and Apple, only if you choose to sign in with them.",
