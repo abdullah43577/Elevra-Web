@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (@media (prefers-color-scheme: dark));
 
 @theme inline {
   --color-background: var(--background);
@@ -47,91 +47,106 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  --color-brand: #5b47e8;
-  --color-brand-dark: #4635c9;
-  --color-brand-muted: #efedfe;
-  --color-canvas: #fafafb;
-  --color-surface-muted: #f3f3f6;
-  --color-line: #eaeaee;
-  --color-line-strong: #d5d5de;
-  --color-foreground-muted: #7d7d8a;
-  --color-foreground-subtle: #b4b4bf;
-  --color-success: #0f9b7a;
-  --color-success-muted: #e5f5f1;
-  --color-amber: #a8761c;
-  --color-amber-muted: #f7f0e3;
-  --color-royal: #2e6fd1;
-  --color-danger: #b93a32;
-  --color-danger-muted: #fbeaea;
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-muted: var(--brand-muted);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+  --color-success: var(--success);
+  --color-success-muted: var(--success-muted);
+  --color-amber: var(--amber);
+  --color-amber-muted: var(--amber-muted);
+  --color-royal: var(--royal);
+  --color-royal-muted: var(--royal-muted);
+  --color-danger: var(--danger);
+  --color-danger-muted: var(--danger-muted);
 }
 
+/* Mirrors ../elevra/src/constants/theme.ts: edit both. */
 :root {
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  color-scheme: light;
+  --brand: #5b47e8;
+  --brand-dark: #4635c9;
+  --brand-muted: #efedfe;
+  --canvas: #fafafb;
+  --surface: #ffffff;
+  --surface-muted: #f3f3f6;
+  --line: #eaeaee;
+  --line-strong: #d5d5de;
+  --foreground: #17171a;
+  --foreground-muted: #7d7d8a;
+  --foreground-subtle: #b4b4bf;
+  --success: #0f9b7a;
+  --success-muted: #e5f5f1;
+  --amber: #a8761c;
+  --amber-muted: #f7f0e3;
+  --royal: #2e6fd1;
+  --royal-muted: #e8f0fb;
+  --danger: #b93a32;
+  --danger-muted: #fbeaea;
+
+  --background: var(--surface);
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface);
+  --popover-foreground: var(--foreground);
   --primary: #5b47e8;
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: #efedfe;
-  --accent-foreground: #4635c9;
+  --primary-foreground: #ffffff;
+  --secondary: var(--surface-muted);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--surface-muted);
+  --muted-foreground: var(--foreground-muted);
+  --accent: var(--brand-muted);
+  --accent-foreground: var(--brand-dark);
   --destructive: #b93a32;
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: #5b47e8;
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--brand);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #5b47e8;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: #efedfe;
-  --sidebar-accent-foreground: #4635c9;
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: #5b47e8;
-  --background: oklch(1 0 0);
-  --foreground: #17171a;
+  --sidebar: var(--surface);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--brand-muted);
+  --sidebar-accent-foreground: var(--brand-dark);
+  --sidebar-border: var(--line);
+  --sidebar-ring: var(--brand);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --brand: #8b7bf5;
+    --brand-dark: #a99cf8;
+    --brand-muted: #241f45;
+    --canvas: #0f0f12;
+    --surface: #17171b;
+    --surface-muted: #1f1f24;
+    --line: #2a2a31;
+    --line-strong: #3a3a43;
+    --foreground: #f4f4f6;
+    --foreground-muted: #9c9ca8;
+    --foreground-subtle: #6e6e7a;
+    --success: #2fc49e;
+    --success-muted: #10302a;
+    --amber: #d9a544;
+    --amber-muted: #33280f;
+    --royal: #6ba0f0;
+    --royal-muted: #16263f;
+    --danger: #e08a83;
+    --danger-muted: #3a1a18;
+    --destructive: #c4453c;
+  }
 }
 
 @layer base {

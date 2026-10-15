@@ -24,7 +24,7 @@ export default function AdminOverviewPage() {
 
       <StatsGrid stats={stats} />
 
-      <div className="mt-8 overflow-hidden rounded-2xl border border-line bg-white">
+      <div className="mt-8 overflow-hidden rounded-2xl border border-line bg-surface">
         <div className="flex items-center justify-between border-b border-line px-5 py-4">
           <p className="text-sm font-semibold text-foreground">Newest users</p>
           <Button variant="ghost" size="sm" asChild>

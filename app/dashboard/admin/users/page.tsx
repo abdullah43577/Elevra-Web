@@ -60,7 +60,7 @@ export default function AdminUsersPage() {
         <AppSimpleSelect containerClassName="w-36" value={tier} onValueChange={handleFilterChange(setTier)} options={TIER_OPTIONS} />
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-line bg-white">
+      <div className="overflow-hidden rounded-2xl border border-line bg-surface">
         <UsersTable users={result?.data ?? []} isLoading={isFetching} emptyMessage="No users match this view." />
         <PaginationControls page={result?.page ?? 1} totalPages={result?.totalPages ?? 1} total={result?.total ?? 0} onPageChange={setPage} />
       </div>

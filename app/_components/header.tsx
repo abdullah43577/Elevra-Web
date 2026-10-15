@@ -18,7 +18,7 @@ export const Header = function () {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line bg-surface/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" aria-label="Elevra home">
           <AppLogo />
@@ -41,7 +41,7 @@ export const Header = function () {
         </button>
       </div>
 
-      <div className={cn("border-t border-line bg-white px-4 pt-2 pb-6 md:hidden", !isMenuOpen && "hidden")}>
+      <div className={cn("border-t border-line bg-surface px-4 pt-2 pb-6 md:hidden", !isMenuOpen && "hidden")}>
         <nav className="flex flex-col gap-1">
           {NAV_LINKS.map(link => (
             <Link key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)} className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted hover:bg-surface-muted hover:text-foreground">

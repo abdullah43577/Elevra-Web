@@ -15,7 +15,7 @@ export const PlanCard = function ({ user, onGrant, onRevoke }: Props) {
   const subscription = user.subscription;
 
   return (
-    <div className="rounded-2xl border border-line bg-white p-5">
+    <div className="rounded-2xl border border-line bg-surface p-5">
       <div className="flex items-center justify-between gap-3">
         <p className="text-sm font-semibold text-foreground">Plan</p>
         {grantedAt ? (

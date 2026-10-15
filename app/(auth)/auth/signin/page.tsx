@@ -24,7 +24,7 @@ export default function SignInPage() {
   const { login, isLoggingIn } = useLogin({ callbackUrl, onSuccess: () => reset() });
 
   return (
-    <div className="rounded-2xl border border-line bg-white p-8">
+    <div className="rounded-2xl border border-line bg-surface p-8">
       <AppText type="h2" className="text-center">
         Admin sign in
       </AppText>

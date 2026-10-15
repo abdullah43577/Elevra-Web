@@ -12,7 +12,7 @@ export const UsageCard = function ({ counts }: { counts: AdminUserDetail["_count
   ];
 
   return (
-    <div className="rounded-2xl border border-line bg-white p-5">
+    <div className="rounded-2xl border border-line bg-surface p-5">
       <p className="text-sm font-semibold text-foreground">What they have made</p>
       <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
         {items.map(item => (

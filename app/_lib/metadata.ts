@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { SITE } from "./site";
 
 export const viewport: Viewport = {
-  themeColor: "#5B47E8",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FAFAFB" },
+    { media: "(prefers-color-scheme: dark)", color: "#0F0F12" },
+  ],
   width: "device-width",
   initialScale: 1,
 };

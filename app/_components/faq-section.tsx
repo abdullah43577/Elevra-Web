@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/shared/reveal";
 import { FAQS } from "../_lib/landing";
 import { SectionHeading } from "./section-heading";
 
@@ -7,7 +8,7 @@ export const FaqSection = function () {
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeading eyebrow="FAQ" title="Questions, answered" />
 
-        <div className="mt-12 divide-y divide-line rounded-2xl border border-line bg-white">
+        <Reveal className="mt-12 divide-y divide-line rounded-2xl border border-line bg-surface">
           {FAQS.map(faq => (
             <details key={faq.question} className="group px-6 py-5">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-foreground">
@@ -17,7 +18,7 @@ export const FaqSection = function () {
               <p className="mt-3 text-sm leading-relaxed text-foreground-muted">{faq.answer}</p>
             </details>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

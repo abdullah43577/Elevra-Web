@@ -23,7 +23,7 @@ export const DashboardSidebar = function ({ items, homeHref, className, onNaviga
   const pathname = usePathname();
 
   return (
-    <aside className={cn("flex h-full w-64 flex-col border-r border-line bg-white", className)}>
+    <aside className={cn("flex h-full w-64 flex-col border-r border-line bg-surface", className)}>
       <div className="flex h-16 items-center border-b border-line px-5">
         <Link href={homeHref} onClick={onNavigate}>
           <AppLogo />

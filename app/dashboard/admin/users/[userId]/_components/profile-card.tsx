@@ -6,7 +6,7 @@ import type { AdminUserDetail } from "@/types/admin";
 
 export const ProfileCard = function ({ user }: { user: AdminUserDetail }) {
   return (
-    <div className="rounded-2xl border border-line bg-white p-5">
+    <div className="rounded-2xl border border-line bg-surface p-5">
       <p className="text-sm font-semibold text-foreground">Account</p>
       <div className="mt-2 divide-y divide-line">
         <InfoRow label="Status" value={<AccountStatusBadge user={user} />} />

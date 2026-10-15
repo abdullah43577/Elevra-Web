@@ -99,7 +99,7 @@ export const FAQS = [
   },
   {
     question: "When can I download it?",
-    answer: "Elevra is coming to Google Play first. The iPhone version follows.",
+    answer: "Elevra is coming soon to Google Play and the App Store.",
   },
   {
     question: "Can I delete my account?",

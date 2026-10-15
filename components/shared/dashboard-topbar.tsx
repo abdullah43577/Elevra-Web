@@ -27,7 +27,7 @@ export const DashboardTopbar = function ({ title, renderSidebar, actions }: Prop
   };
 
   return (
-    <header className="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-line bg-white px-4 sm:px-6">
+    <header className="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-line bg-surface px-4 sm:px-6">
       <div className="flex items-center gap-3">
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
           <SheetTrigger className="rounded-md p-2 text-foreground-muted hover:bg-muted lg:hidden" aria-label="Open navigation">

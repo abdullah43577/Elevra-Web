@@ -20,7 +20,7 @@ const ActionRow = function ({ title, description, action }: { title: string; des
 
 export const DangerZoneCard = function ({ isSuspended, onToggleSuspend, onDelete }: Props) {
   return (
-    <div className="rounded-2xl border border-line bg-white px-5 pt-5 pb-1">
+    <div className="rounded-2xl border border-line bg-surface px-5 pt-5 pb-1">
       <p className="text-sm font-semibold text-foreground">Account actions</p>
       <div className="divide-y divide-line">
         <ActionRow

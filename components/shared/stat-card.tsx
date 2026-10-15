@@ -10,7 +10,7 @@ interface Props {
 
 export const StatCard = function ({ label, value, hint, icon: Icon }: Props) {
   return (
-    <div className="rounded-2xl border border-line bg-white p-5">
+    <div className="rounded-2xl border border-line bg-surface p-5">
       <div className="flex items-center justify-between">
         <p className="text-sm font-medium text-muted-foreground">{label}</p>
         <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-muted">

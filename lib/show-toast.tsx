@@ -7,46 +7,46 @@ type ToastType = "error" | "success" | "warning" | "info" | "loading";
 const toastConfig: Record<ToastType, { icon: ReactNode; style: React.CSSProperties }> = {
   success: {
     icon: createElement(CheckCircle2, {
-      className: "h-5 w-5 text-emerald-600",
+      className: "h-5 w-5 text-success",
     }),
     style: {
-      background: "#ECFDF5",
-      border: "1px solid #A7F3D0",
-      color: "#065F46",
+      background: "var(--success-muted)",
+      border: "1px solid var(--line)",
+      color: "var(--foreground)",
     },
   },
   error: {
-    icon: createElement(XCircle, { className: "h-5 w-5 text-red-600" }),
+    icon: createElement(XCircle, { className: "h-5 w-5 text-danger" }),
     style: {
-      background: "#FEF2F2",
-      border: "1px solid #FECACA",
-      color: "#991B1B",
+      background: "var(--danger-muted)",
+      border: "1px solid var(--line)",
+      color: "var(--foreground)",
     },
   },
   warning: {
-    icon: createElement(AlertTriangle, { className: "h-5 w-5 text-amber-600" }),
+    icon: createElement(AlertTriangle, { className: "h-5 w-5 text-amber" }),
     style: {
-      background: "#FFFBEB",
-      border: "1px solid #FDE68A",
-      color: "#92400E",
+      background: "var(--amber-muted)",
+      border: "1px solid var(--line)",
+      color: "var(--foreground)",
     },
   },
   info: {
-    icon: createElement(Info, { className: "h-5 w-5 text-blue-600" }),
+    icon: createElement(Info, { className: "h-5 w-5 text-royal" }),
     style: {
-      background: "#EFF6FF",
-      border: "1px solid #BFDBFE",
-      color: "#1E40AF",
+      background: "var(--royal-muted)",
+      border: "1px solid var(--line)",
+      color: "var(--foreground)",
     },
   },
   loading: {
     icon: createElement(Loader2, {
-      className: "h-5 w-5 animate-spin text-gray-500",
+      className: "h-5 w-5 animate-spin text-foreground-muted",
     }),
     style: {
-      background: "#F9FAFB",
-      border: "1px solid #E5E7EB",
-      color: "#374151",
+      background: "var(--surface)",
+      border: "1px solid var(--line)",
+      color: "var(--foreground)",
     },
   },
 };

@@ -2,7 +2,7 @@ import { Info } from "lucide-react";
 
 export const ProForEveryoneNotice = function () {
   return (
-    <div className="mb-6 flex gap-3 rounded-2xl border border-line bg-white p-4">
+    <div className="mb-6 flex gap-3 rounded-2xl border border-line bg-surface p-4">
       <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-amber-muted">
         <Info className="size-4.5 text-amber" />
       </div>
