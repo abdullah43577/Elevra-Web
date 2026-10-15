@@ -2,10 +2,12 @@
 
 import { FormInput } from "@/components/form/form-input";
 import { AppText } from "@/components/shared/app-text";
+import { Reveal } from "@/components/shared/reveal";
 import { Button } from "@/components/ui/button";
 import { loginSchema, type LoginFormValues } from "@/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Lock, Mail } from "lucide-react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { useLogin } from "./_hooks/use-login";
@@ -24,12 +26,10 @@ export default function SignInPage() {
   const { login, isLoggingIn } = useLogin({ callbackUrl, onSuccess: () => reset() });
 
   return (
-    <div className="rounded-2xl border border-line bg-surface p-8">
-      <AppText type="h2" className="text-center">
-        Admin sign in
-      </AppText>
-      <AppText type="subtitle" className="mt-1 text-center text-sm">
-        For the Elevra team. The app itself lives on your phone.
+    <Reveal onLoad>
+      <AppText type="h2">Welcome back</AppText>
+      <AppText type="subtitle" className="mt-1.5 text-sm">
+        Sign in to the Elevra admin dashboard.
       </AppText>
 
       <form onSubmit={handleSubmit(data => login(data))} className="mt-8 space-y-5">
@@ -41,6 +41,13 @@ export default function SignInPage() {
           Sign in
         </Button>
       </form>
-    </div>
+
+      <p className="mt-8 text-sm text-foreground-muted">
+        Looking for the app?{" "}
+        <Link href="/#download" className="font-medium text-brand hover:underline">
+          Elevra is on your phone
+        </Link>
+      </p>
+    </Reveal>
   );
 }

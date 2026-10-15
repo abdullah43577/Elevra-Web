@@ -10,7 +10,7 @@ export const DownloadSection = function () {
           <Image src="/images/logo-mark.png" alt="" width={56} height={56} className="mx-auto size-14 rounded-2xl" />
           <h2 className="mt-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Your next application starts here</h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-foreground-muted">Elevra is coming soon to Google Play and the App Store.</p>
-          <StoreBadges className="mt-8 justify-center" />
+          <StoreBadges className="mt-8 items-center" />
         </div>
       </Reveal>
     </section>
